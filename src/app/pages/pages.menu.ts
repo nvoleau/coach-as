@@ -318,6 +318,17 @@ export const PAGES_MENU = [
             target: '_blank'
           }
         }
+      },{
+        path: 'seances',
+        data: {
+          menu: {
+            title: 'Séances',
+            icon: 'ion-android-home',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
       }
     ]
   }
