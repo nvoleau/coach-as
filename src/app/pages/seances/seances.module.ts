@@ -4,11 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 
 import { Seance } from './seances.component';
+
 import { routing }       from './seances.routing';
 
 
 import { Calendar } from './calendar';
 import { CalendarService } from './calendar/calendar.service';
+import { List } from './list';
+import { ListService } from './list/list.service';
 
 
 @NgModule({
@@ -21,10 +24,12 @@ import { CalendarService } from './calendar/calendar.service';
   declarations: [
    
     Calendar,
-    Seance
+    Seance,
+    List
   ],
   providers: [
     CalendarService,
+    ListService
 
   ]
 })
