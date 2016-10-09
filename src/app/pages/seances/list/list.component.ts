@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {BaThemeConfigProvider} from '../../../theme';
+import { Router} from '@angular/router';
 
 import {ListService} from './list.service';
 
@@ -16,7 +17,7 @@ export class List {
   public list:Array<any>;
   public newTodoText:string = '';
 
-  constructor(private _baConfig:BaThemeConfigProvider, private _listService:ListService) {
+  constructor(private _baConfig:BaThemeConfigProvider, private _listService:ListService, private router:Router   ) {
     this.list = this._listService.getList();
 
     this.list.forEach((item) => {
@@ -32,14 +33,16 @@ export class List {
 
   addToDoItem($event) {
 
-    if (($event.which === 1 || $event.which === 13) && this.newTodoText.trim() != '') {
+    this.router.navigate(['/pages/seance']);
+
+    /** if (($event.which === 1 || $event.which === 13) && this.newTodoText.trim() != '') {
 
       this.list.unshift({
         text: this.newTodoText,
         color: this._getRandomColor(),
       });
       this.newTodoText = '';
-    }
+    }*/
   }
 
   private _getRandomColor() {

@@ -1,0 +1,78 @@
+<ba-card title="Description de la séance" baCardClass="with-scroll">
+<form class="form-horizontal">
+  <div class="form-group row">
+    <label for="inputDate" class="col-sm-2 form-control-label">Date de la séance</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="inputDate" placeholder="Date">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputHeureDebut" class="col-sm-2 form-control-label">Heure de début</label>
+    <div class="col-sm-10">
+      <input type="time" class="form-control" id="inputHeureDebut" placeholder="Heure Debut">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputHeureFin" class="col-sm-2 form-control-label">Heure de Fin</label>
+    <div class="col-sm-10">
+      <input type="time" class="form-control" id="inputHeureFin" placeholder="Heure Fin">
+    </div>
+  </div>
+
+
+<div class="form-group row">
+  <label for="selectActivite" class="col-sm-2 form-control-label">Activité</label>
+  <div class="col-sm-10">
+  <select class="form-control" id="selectActivite">
+      <option></option>
+    <option>Natation</option>
+    <option>CAP</option>
+    <option>Vélo</option>
+    <option>CAP & Vélo</option>
+  </select>
+  </div>
+</div>
+
+
+<div class="form-group row">
+     <label for="descActivite" class="col-sm-2 form-control-label">Description de la séance</label>
+       <div class="col-sm-10">
+    <textarea class="form-control" id = "descActivite"></textarea>
+       </div>
+  </div>
+
+  <div class="form-group row">
+  <label for="selectGroupe" class="col-sm-2 form-control-label">Groupe</label>
+  <div class="col-sm-10">
+  <select class="form-control" id="selectGroupe">
+      <option></option>
+    <option>Poussin</option>
+    <option>Pupille</option>
+    <option>Benjamin</option>
+    <option>Minime</option>
+    <option>Cadet</option>
+    <option>Junior</option>
+    <option>Adulte</option>
+    <option>Feminine</option>
+  </select>
+  </div>
+</div>
+
+<div class="form-group row">
+     <label class="col-sm-2 form-control-label">Difficultée de la séance</label>
+<div class="col-sm-10">
+  <rating [(ngModel)]="_rate1" max="{{_max1}}" [ngModelOptions]="{standalone: true}" stateOn="ion-android-star" stateOff="ion-android-star-outline" class="rating"></rating>
+</div>
+</div>
+
+
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-warning">Enregistrez</button>
+    </div>
+  </div>
+</form>
+
+
+
+</ba-card>
