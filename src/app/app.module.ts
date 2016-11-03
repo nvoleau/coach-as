@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
+//firebase
+import { AngularFireModule } from 'angularfire2';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -30,6 +32,17 @@ type StoreType = {
   disposeOldHosts: () => void
 };
 
+
+//firebase
+// Must export the config
+export const firebaseConfig = {
+  apiKey: "AIzaSyA0zYkh4r8oqT6qTPCo_hLRDk0zaxS4BJM",
+    authDomain: "coach-as.firebaseapp.com",
+    databaseURL: "https://coach-as.firebaseio.com",
+    storageBucket: "",
+    messagingSenderId: "26396567970"
+};
+
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
@@ -46,7 +59,8 @@ type StoreType = {
     ReactiveFormsModule,
     NgaModule.forRoot(),
     PagesModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
