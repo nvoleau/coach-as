@@ -9,7 +9,7 @@
   <div class="form-group row">
     <label for="inputHeureDebut" class="col-sm-2 form-control-label">Heure de début</label>
     <div class="col-sm-10">
-      <input type="time" class="form-control" id="inputHeureDebut" placeholder="Heure Debut">
+      <input type="time" class="form-control" id="inputHeureDebut" name="inputHeureDebut" placeholder="Heure Debut" ngModel>
     </div>
   </div>
    <div class="form-group row">
@@ -37,14 +37,14 @@
 <div class="form-group row">
      <label for="descActivite" class="col-sm-2 form-control-label">Description de la séance</label>
        <div class="col-sm-10">
-    <textarea class="form-control" id = "descActivite"></textarea>
+    <textarea class="form-control" id = "descActivite" name = "descActivite" ngModel></textarea>
        </div>
   </div>
 
   <div class="form-group row">
   <label for="selectGroupe" class="col-sm-2 form-control-label">Groupe</label>
   <div class="col-sm-10">
-  <select class="form-control" id="selectGroupe">
+  <select class="form-control" id="selectGroupe" name="selectGroupe" ngModel>
       <option></option>
     <option>Poussin</option>
     <option>Pupille</option>
@@ -61,7 +61,7 @@
 <div class="form-group row">
      <label class="col-sm-2 form-control-label">Difficultée de la séance</label>
 <div class="col-sm-10">
-  <rating [(ngModel)]="_rate1" max="{{_max1}}" [ngModelOptions]="{standalone: true}" stateOn="ion-android-star" stateOff="ion-android-star-outline" class="rating"></rating>
+  <rating [(ngModel)]="rate" max="{{_max1}}" [ngModelOptions]="{standalone: true}" stateOn="ion-android-star" stateOff="ion-android-star-outline" class="rating" ></rating>
 </div>
 </div>
 

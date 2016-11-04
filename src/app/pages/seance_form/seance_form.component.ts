@@ -12,7 +12,7 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export class SeanceForm {
 
-   public _rate1:number = 3;
+   public rate:number = 3;
    public _max1:number = 10;
    //public form = new Seance();
 
@@ -27,7 +27,8 @@ export class SeanceForm {
 //https://scotch.io/tutorials/angular-2-form-validation
 
   onSubmit(form:any): void{
+    form.rate=this.rate;
     console.log(form);
-    this.items.push({date:form});
+    this.items.push(form);
   }
 }
