@@ -1,0 +1,23 @@
+<ba-card title="Groupe" baCardClass="with-scroll">
+<form class="form-horizontal" (ngSubmit)="onSubmit(groupeForm.value)" #groupeForm="ngForm">
+  
+
+<div class="form-group row">
+     <label for="nomGroupe" class="col-sm-2 form-control-label">Nom du Groupe</label>
+       <div class="col-sm-10">
+      <input type="text" class="form-control" id = "nomGroupe" name = "nomGroupe" ngModel>
+       </div>
+  </div>
+
+  
+
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-warning">Enregistrez</button>
+    </div>
+  </div>
+</form>
+
+
+
+</ba-card>

@@ -24,7 +24,9 @@ const routes: Routes = [
       { path: 'tables', loadChildren: () => System.import('./tables/tables.module') },
       { path: 'maps', loadChildren: () => System.import('./maps/maps.module') },
        { path: 'seances', loadChildren: () => System.import('./seances/seances.module') },
-         { path: 'seance', loadChildren: () => System.import('./seance_form/seance_form.module')}
+         { path: 'seance', loadChildren: () => System.import('./seance_form/seance_form.module')},
+          { path: 'groupes', loadChildren: () => System.import('./groupe_list/groupe_list.module')},
+            { path: 'groupe', loadChildren: () => System.import('./groupe/groupe.module')}
     ]
   }
 ];

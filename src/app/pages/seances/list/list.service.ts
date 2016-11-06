@@ -1,7 +1,15 @@
 import {Injectable} from '@angular/core';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 @Injectable()
 export class ListService {
+
+
+items: FirebaseListObservable<any[]>;
+
+  constructor(af: AngularFire) {
+    this.items = af.database.list('/seances');
+  }
 
   private _todoList = [
     { groupe: 'Benjamin', activite:'Natation', date:'10/10/2016' },
@@ -17,6 +25,6 @@ export class ListService {
   ];
 
   getList() {
-    return this._todoList;
+    return this.items;
   }
 }

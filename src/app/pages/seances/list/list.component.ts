@@ -1,6 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {BaThemeConfigProvider} from '../../../theme';
 import { Router} from '@angular/router';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import {ListService} from './list.service';
 
@@ -14,21 +15,25 @@ export class List {
   
   public dashboardColors = this._baConfig.get().colors.dashboard;
 
-  public list:Array<any>;
+  //public list:Array<any>;
+  public list: FirebaseListObservable<any[]>;
   public newTodoText:string = '';
 
   constructor(private _baConfig:BaThemeConfigProvider, private _listService:ListService, private router:Router   ) {
     this.list = this._listService.getList();
+    
 
-    this.list.forEach((item) => {
-      item.color = this._getRandomColor();
-    });
+    //this.list.forEach((item) => {
+      //item.color = this._getRandomColor();
+   // });
   }
 
   getNotDeleted() {
-    return this.list.filter((item:any) => {
-      return !item.deleted
-    })
+    //return this.list.filter((item:any) => {
+      //return !item.deleted
+    //})
+    console.log(this.list);
+    return this.list;
   }
 
   addToDoItem($event) {
