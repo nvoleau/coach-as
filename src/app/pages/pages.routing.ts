@@ -23,10 +23,12 @@ const routes: Routes = [
       { path: 'forms', loadChildren: () => System.import('./forms/forms.module') },
       { path: 'tables', loadChildren: () => System.import('./tables/tables.module') },
       { path: 'maps', loadChildren: () => System.import('./maps/maps.module') },
-       { path: 'seances', loadChildren: () => System.import('./seances/seances.module') },
-         { path: 'seance', loadChildren: () => System.import('./seance_form/seance_form.module')},
-          { path: 'groupes', loadChildren: () => System.import('./groupe_list/groupe_list.module')},
-            { path: 'groupe', loadChildren: () => System.import('./groupe/groupe.module')}
+      { path: 'seances', loadChildren: () => System.import('./seances/seances.module') },
+      { path: 'seance', loadChildren: () => System.import('./seance_form/seance_form.module')},
+      { path: 'groupes', loadChildren: () => System.import('./groupe_list/groupe_list.module')},
+      { path: 'groupe', loadChildren: () => System.import('./groupe/groupe.module')},
+      { path: 'adherents', loadChildren: () => System.import('./adherent_list/adherent_list.module')},
+      { path: 'adherent', loadChildren: () => System.import('./adherent/adherent.module')}
     ]
   }
 ];

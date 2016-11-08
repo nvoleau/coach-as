@@ -1,0 +1,39 @@
+<ba-card title="Adherent" baCardClass="with-scroll">
+<form class="form-horizontal" (ngSubmit)="onSubmit(adherentForm.value)" #adherentForm="ngForm">
+
+
+  <div class="form-group row">
+  <label for="nomGroupe" class="col-sm-2 form-control-label">Nom du Groupe</label>
+   <div class="col-sm-10">
+      <select class="form-control" id="groupeAdherent" name="groupeAdherent" ngModel>
+        <option *ngFor="let g of groupes  | async " [value]="g.nomGroupe">{{g.nomGroupe}}</option>
+      </select>
+   </div>
+</div>
+
+  <div class="form-group row">
+     <label for="nomAdherent" class="col-sm-2 form-control-label">Nom</label>
+       <div class="col-sm-10">
+      <input type="text" class="form-control" id = "nomAdherent" name = "nomAdherent" ngModel>
+       </div>
+  </div>
+
+    <div class="form-group row">
+     <label for="prenomAdherent" class="col-sm-2 form-control-label">Prenom</label>
+       <div class="col-sm-10">
+      <input type="text" class="form-control" id = "prenomAdherent" name = "prenomAdherent" ngModel>
+       </div>
+  </div>
+
+  
+
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-warning">Enregistrez</button>
+    </div>
+  </div>
+</form>
+
+
+
+</ba-card>
