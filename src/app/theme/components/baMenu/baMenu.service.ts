@@ -76,8 +76,14 @@ export class BaMenuService {
     }
 
     // we have to collect all paths to correctly build the url then
-    item.route.paths = parent && parent.route && parent.route.paths ? parent.route.paths.slice(0) : [];
-    item.route.paths.push(item.route.path);
+    //item.route.paths = parent && parent.route && parent.route.paths ? parent.route.paths.slice(0) : [];
+    //item.route.paths.push(item.route.path);
+        if (Array.isArray(item.route.path)) {
+      item.route.paths = item.route.path;
+    } else {
+      item.route.paths = parent && parent.route && parent.route.paths ? parent.route.paths.slice(0) : ['/'];
+      if (!!item.route.path) item.route.paths.push(item.route.path);
+    }
 
     if (object.children && object.children.length > 0) {
       item.children = this._convertArrayToItems(object.children, item);

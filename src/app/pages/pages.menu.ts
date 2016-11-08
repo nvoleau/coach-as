@@ -58,7 +58,7 @@ export const PAGES_MENU = [
       //    }
       //  ]
       //},
-      {
+    /**  {
         path: 'charts',
         data: {
           menu: {
@@ -318,7 +318,7 @@ export const PAGES_MENU = [
             target: '_blank'
           }
         }
-      },{
+      },**/{
         path: 'seances',
         data: {
           menu: {
@@ -329,7 +329,20 @@ export const PAGES_MENU = [
             order: 0
           }
         }
-      },{
+      },
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'Administration',
+            icon: 'ion-ios-more',
+            selected: false,
+            expanded: false,
+            order: 700,
+          }
+        },
+        children: [
+          {
         path: 'groupes',
         data: {
           menu: {
@@ -340,7 +353,8 @@ export const PAGES_MENU = [
             order: 0
           }
         }
-      },{
+      },
+          {
         path: 'adherents',
         data: {
           menu: {
@@ -351,6 +365,8 @@ export const PAGES_MENU = [
             order: 0
           }
         }
+      }
+        ]
       }
     ]
   }
