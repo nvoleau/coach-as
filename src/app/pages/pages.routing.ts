@@ -28,7 +28,8 @@ const routes: Routes = [
       { path: 'groupes', loadChildren: () => System.import('./groupe_list/groupe_list.module')},
       { path: 'groupe', loadChildren: () => System.import('./groupe/groupe.module')},
       { path: 'adherents', loadChildren: () => System.import('./adherent_list/adherent_list.module')},
-      { path: 'adherent', loadChildren: () => System.import('./adherent/adherent.module')}
+      { path: 'adherent', loadChildren: () => System.import('./adherent/adherent.module')},
+        { path: 'presence/:id', loadChildren: () => System.import('./presence/presence.module')}
     ]
   }
 ];

@@ -1,0 +1,16 @@
+<ba-card title="Description de la séance" baCardClass="with-scroll">
+
+
+  <div class="form-group row">
+  <label for="selectGroupe" class="col-sm-2 form-control-label">Groupe</label>
+  <div class="col-sm-10">
+
+<li *ngFor="let seance of items | async">{{seance.selectActivite}}</li>
+
+  
+  </div>
+</div>
+
+
+
+</ba-card>

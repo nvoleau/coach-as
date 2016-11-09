@@ -50,6 +50,12 @@ export class List {
     }*/
   }
 
+setPresence(item:any){
+  console.log(item);
+   console.log(item.$key);
+    this.router.navigate(['/pages/presence',item.$key]);
+}
+
   private _getRandomColor() {
     let colors = Object.keys(this.dashboardColors).map(key => this.dashboardColors[key]);
 

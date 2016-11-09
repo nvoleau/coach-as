@@ -44,16 +44,9 @@
   <div class="form-group row">
   <label for="selectGroupe" class="col-sm-2 form-control-label">Groupe</label>
   <div class="col-sm-10">
-  <select class="form-control" id="selectGroupe" name="selectGroupe" ngModel>
-      <option></option>
-    <option>Poussin</option>
-    <option>Pupille</option>
-    <option>Benjamin</option>
-    <option>Minime</option>
-    <option>Cadet</option>
-    <option>Junior</option>
-    <option>Adulte</option>
-    <option>Feminine</option>
+  <select  multiple class="form-control" id="selectGroupe" name="selectGroupe" [(ngModel)]="userForm.selectGroupe">
+        <option *ngFor="let g of groupes  | async " [value]="g.nomGroupe">{{g.nomGroupe}}</option>
+
   </select>
   </div>
 </div>
